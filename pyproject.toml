@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ocrax"
+version = "0.1.0"
+description = "OCR research workflows for PP-OCRv6 and RxHandBD"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "jax>=0.4.35",
+  "flax>=0.10",
+  "optax>=0.2",
+  "orbax-checkpoint>=0.10",
+  "numpy>=1.26",
+  "Pillow>=10",
+  "PyYAML>=6",
+]
+
+[project.optional-dependencies]
+paddle = ["paddlepaddle>=3.0", "paddleocr>=3.7"]
+cloud = ["google-auth>=2.30", "google-cloud-storage>=2.18,<4"]
+
+test = ["pytest>=8"]
+
+[project.scripts]
+ocrax-train = "ocrax.cli.train:main"
+ocrax-evaluate = "ocrax.cli.evaluate_paddle:main"
+ocrax-evaluate-jax = "ocrax.cli.evaluate_jax:main"
+ocrax-evaluate-vl = "ocrax.cli.evaluate_vl:main"
+ocrax-convert = "ocrax.cli.convert:main"
+ocrax-export-paddle = "ocrax.cli.export_paddle_pir:main"
+ocrax-paddle-probe = "ocrax.cli.paddle_probe:main"
+ocrax-parity = "ocrax.cli.parity:main"
+ocrax-prepare-data = "ocrax.cli.prepare_data:main"
+ocrax-colab = "ocrax.cli.colab:main"
+ocrax-resume = "ocrax.cli.resume:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

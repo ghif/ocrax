@@ -1,0 +1,70 @@
+{
+  "images": [
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1116.jpg",
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1117.jpg",
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1118.jpg",
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1119.jpg",
+    "/private/tmp/ppocrv6_parity_cases/narrow_gray.png",
+    "/private/tmp/ppocrv6_parity_cases/long_cap.png",
+    "/private/tmp/ppocrv6_parity_cases/blank.png",
+    "/private/tmp/ppocrv6_parity_cases/resize_boundary.png",
+    "/private/tmp/ppocrv6_parity_cases/tall_narrow.png"
+  ],
+  "preprocessing": {
+    "input_shape_nchw": [
+      9,
+      3,
+      48,
+      320
+    ],
+    "resized_widths_before_padding": [
+      48,
+      48,
+      48,
+      48,
+      23,
+      320,
+      320,
+      92,
+      4
+    ],
+    "batch_sha256": "e47d816b149586516052abe845508a40ad4ccf54e931afdd0f9b53992fa1162f"
+  },
+  "shape": [
+    9,
+    40,
+    18710
+  ],
+  "ctc_logits": {
+    "shape": [
+      9,
+      40,
+      18710
+    ],
+    "max_abs_error": 0.0002193450927734375,
+    "mean_abs_error": 1.1939338946831413e-05,
+    "max_relative_error": 17.048992156982422,
+    "allclose": true
+  },
+  "max_abs_error": 0.00033479928970336914,
+  "mean_abs_error": 4.122561403363534e-09,
+  "max_relative_error": 0.00042028125608339906,
+  "argmax_agreement": 1.0,
+  "mismatched_timestep_count": 0,
+  "timestep_count": 360,
+  "per_image_argmax_agreement": {
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1116.jpg": 1.0,
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1117.jpg": 1.0,
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1118.jpg": 1.0,
+    "/Users/mghifary/Work/Code/AI/data/18478741/RxHandBD/Train_Set/P1119.jpg": 1.0,
+    "/private/tmp/ppocrv6_parity_cases/narrow_gray.png": 1.0,
+    "/private/tmp/ppocrv6_parity_cases/long_cap.png": 1.0,
+    "/private/tmp/ppocrv6_parity_cases/blank.png": 1.0,
+    "/private/tmp/ppocrv6_parity_cases/resize_boundary.png": 1.0,
+    "/private/tmp/ppocrv6_parity_cases/tall_narrow.png": 1.0
+  },
+  "max_top1_probability_error": 0.00033479928970336914,
+  "atol": 0.0002,
+  "rtol": 0.0002,
+  "allclose": true
+}

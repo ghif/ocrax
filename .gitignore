@@ -1,0 +1,19 @@
+# Model checkpoints and generated experiment artifacts
+/artifacts/
+/outputs/
+
+# Dataset-derived manifests contain local paths and transcript data
+/data/manifests/
+
+# Python environments, build products, and caches
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.pytest_cache/
+.ruff_cache/
+
+# macOS metadata
+.DS_Store
