@@ -21,6 +21,7 @@ dependencies = [
 [project.optional-dependencies]
 paddle = ["paddlepaddle>=3.0", "paddleocr>=3.7"]
 cloud = ["google-auth>=2.30", "google-cloud-storage>=2.18,<4"]
+ui = ["streamlit>=1.35", "pypdfium2>=4.0"]
 
 test = ["pytest>=8"]
 
@@ -30,6 +31,8 @@ ocrax-evaluate = "ocrax.cli.evaluate_paddle:main"
 ocrax-evaluate-jax = "ocrax.cli.evaluate_jax:main"
 ocrax-evaluate-vl = "ocrax.cli.evaluate_vl:main"
 ocrax-convert = "ocrax.cli.convert:main"
+ocrax-convert-det = "ocrax.cli.convert_det:main"
+ocrax-parity-det = "ocrax.cli.parity_det:main"
 ocrax-export-paddle = "ocrax.cli.export_paddle_pir:main"
 ocrax-paddle-probe = "ocrax.cli.paddle_probe:main"
 ocrax-parity = "ocrax.cli.parity:main"
